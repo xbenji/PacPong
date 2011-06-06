@@ -6,13 +6,6 @@
 <com.xben.game.pacpong.PacPongView
 			android:id="@+id/pacpong"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"/>
-<TextView android:text="@string/hits_text" 
-		  android:id="@+id/scoretext"
-		  android:layout_width="wrap_content" 
-		  android:layout_height= "20pt"
-		  android:layout_marginLeft="10dip" 
-		  android:layout_marginTop="10dip" 
-		  android:layout_gravity="bottom"
-		  android:textSize="24sp"/>
+			android:layout_height="match_parent"></com.xben.game.pacpong.PacPongView><TextView android:text="@string/hits_text" android:id="@+id/scoretext" android:layout_width="wrap_content" android:layout_height="20pt" android:layout_marginLeft="10dip" android:layout_marginTop="10dip" android:layout_gravity="top" android:textSize="24sp" />
+
 </FrameLayout>
