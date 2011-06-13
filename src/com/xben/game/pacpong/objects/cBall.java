@@ -12,11 +12,11 @@ public class cBall {
 	private class cTouchPath {
 
 		private class p { public p(int ix, int iy) {
-			x = ix; y =iy; }int x,y; }
+			x = ix; y =iy; } public int x,y; }
 
-		p[] mPath;
+		public p[] mPath;
 		int BUFFER_SIZE = 32;
-		int mNbPoints;
+		int mNbPoints = 0;
 		int mOffset = -2;
 
 		public cTouchPath()
@@ -181,7 +181,13 @@ public class cBall {
 		final Paint lPaint = new Paint();
 		lPaint.setColor(Color.WHITE);
 		lPaint.setAntiAlias(true);
-		iCanvas.drawCircle(getX(), getY(), RADIUS, lPaint);		
+		iCanvas.drawCircle(getX(), getY(), RADIUS, lPaint);
+		
+		// draw touchpoints
+		for (int i = 0; i < mTouchPath.mNbPoints; i++ )
+		{
+			iCanvas.drawCircle(mTouchPath.mPath[i].x, mTouchPath.mPath[i].y, 3, lPaint);
+		}
 	}
 
 	public void arm(int iX, int iY) {

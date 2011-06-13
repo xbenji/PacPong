@@ -78,9 +78,10 @@ public class PacPongThread extends Thread {
 		mPaint = new Paint();
 		mHandler = iHandler;
 
-		mFieldRect = new cFieldRect(90, 250, 300, 300);
-		mTarget = new cTarget(0, 0, 0, 150);
-		mBall = new cBall(120, 120);
+		//mFieldRect = new cFieldRect(90, 250, 300, 300);
+		mFieldRect = new cFieldRect(0, 80, 480, 720);
+		mTarget = new cTarget(150, 150, 0, 150);
+		mBall = new cBall(240, 650);
 		mBall.setFieldRect(mFieldRect);
 		
 		mGameState = eGameState.BEGIN;
@@ -129,7 +130,7 @@ public class PacPongThread extends Thread {
 			// lets move
 			if (mBall.move()){
 				if (mBall.checkBounce()){
-					buzz(100);
+					buzz(50);
 					setHitTextCount(mBall.mBounceCount);
 				}
 			}
